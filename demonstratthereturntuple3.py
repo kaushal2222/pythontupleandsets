@@ -1,10 +1,11 @@
-# x = [1, 2, 3]
-# y = [4, 5, 6]
-# zipped = zip(x, y)
-# a=list(zipped)
-# print(a)
-
-questions = ('name', 'quest', 'favorite color')
-answers = ('lancelot', 'the holy grail', 'blue')
-for quetion, answer in zip(questions, answers):
-  print(f'What is your {quetion}? It is {answer}.')
+def return_multiple_items():
+ monument = input("Which is your favorite monument? ")
+ year = input("When was it constructed? ")
+ return monument, year
+def main():
+ mnt, yr = return_multiple_items()
+ print(f"My favorite monument is {mnt} and it was constructed in {yr}")
+ result = return_multiple_items()
+ print(f"My favorite monument is {result[0]} and it was constructed in {result[1]}")
+if __name__ == "__main__":
+  main()
